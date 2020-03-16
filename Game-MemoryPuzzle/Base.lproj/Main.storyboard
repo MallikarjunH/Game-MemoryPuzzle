@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="s2m-QU-4I5">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Memory Puzzle Game-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Game_MemoryPuzzle" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game Mode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ANF-ek-esT">
+                                <rect key="frame" x="20" y="105" width="95" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="95" id="dMr-BM-gvZ"/>
+                                    <constraint firstAttribute="height" constant="29" id="xVg-15-XQ1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="LCx-cA-YyA">
+                                <rect key="frame" x="130" y="103" width="264" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="G3H-TI-trc"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="4 x 4"/>
+                                    <segment title="6 x 6"/>
+                                    <segment title="8 x 8"/>
+                                </segments>
+                                <connections>
+                                    <action selector="gameModeAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="vro-1M-7pI"/>
+                                </connections>
+                            </segmentedControl>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L13-6v-Uuc">
+                                <rect key="frame" x="20" y="154" width="374" height="405"/>
+                                <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="L13-6v-Uuc" secondAttribute="height" multiplier="374:405" id="Mcr-q5-Z6v"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00' : 00''" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Q1-hY-Rfw">
+                                <rect key="frame" x="144" y="579" width="119" height="43"/>
+                                <color key="backgroundColor" red="0.96862745100000003" green="0.89167033450704225" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="bYJ-PX-YLt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You Won" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4UT-rn-VnI">
+                                <rect key="frame" x="20" y="637" width="374" height="42"/>
+                                <color key="backgroundColor" red="0.96862745100000003" green="0.70980392160000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="FJt-Wk-c5Z"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="L13-6v-Uuc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="6So-Ka-rHP"/>
+                            <constraint firstItem="8Q1-hY-Rfw" firstAttribute="top" secondItem="L13-6v-Uuc" secondAttribute="bottom" constant="20" id="DC7-gJ-v8E"/>
+                            <constraint firstItem="LCx-cA-YyA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="KXh-gD-TPc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4UT-rn-VnI" secondAttribute="bottom" constant="183" id="LBd-5s-VwS"/>
+                            <constraint firstItem="4UT-rn-VnI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="MUi-bS-7xY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LCx-cA-YyA" secondAttribute="trailing" constant="20" id="Pmq-W2-Wcy"/>
+                            <constraint firstItem="8Q1-hY-Rfw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="144" id="Qfr-rO-8C0"/>
+                            <constraint firstItem="LCx-cA-YyA" firstAttribute="leading" secondItem="ANF-ek-esT" secondAttribute="trailing" constant="15" id="ZaE-zQ-W2t"/>
+                            <constraint firstItem="ANF-ek-esT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="cpv-SC-uXo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8Q1-hY-Rfw" secondAttribute="trailing" constant="151" id="e6X-dk-V05"/>
+                            <constraint firstItem="L13-6v-Uuc" firstAttribute="top" secondItem="ANF-ek-esT" secondAttribute="bottom" constant="20" id="gCX-tZ-FWT"/>
+                            <constraint firstItem="4UT-rn-VnI" firstAttribute="top" secondItem="8Q1-hY-Rfw" secondAttribute="bottom" constant="15" id="gli-ho-rMJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="L13-6v-Uuc" secondAttribute="trailing" constant="20" id="htv-DU-CmH"/>
+                            <constraint firstItem="L13-6v-Uuc" firstAttribute="top" secondItem="ANF-ek-esT" secondAttribute="bottom" constant="20" id="x5n-uv-RDn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4UT-rn-VnI" secondAttribute="trailing" constant="20" id="xSq-dM-flJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Memory Puzzle Game" id="EAk-6P-nvp">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="vhG-zW-LUU">
+                            <connections>
+                                <action selector="resetGameAction:" destination="BYZ-38-t0r" id="KWd-yz-oaS"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="gameView" destination="L13-6v-Uuc" id="Q1A-vL-z2v"/>
+                        <outlet property="timeLabel" destination="8Q1-hY-Rfw" id="F6k-dX-g8s"/>
+                        <outlet property="wonLabel" destination="4UT-rn-VnI" id="jVz-pm-jNd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1113.0434782608697" y="-547.09821428571422"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="49y-9M-wV3">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="s2m-QU-4I5" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="D7s-sL-7mW">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="xti-Wm-KCr"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fcr-JO-I1T" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="218.84057971014494" y="-547.09821428571422"/>
+        </scene>
+    </scenes>
+</document>
